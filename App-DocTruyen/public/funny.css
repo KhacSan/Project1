@@ -1,0 +1,41 @@
+body{
+    background-image: url("b2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+div.funny{
+    padding: 10px;
+    background-image: none;
+    background-color: lightblue;
+    margin: auto;
+    margin-top: 45px;
+    width: 80%;
+    border: 10px solid white;
+    border-radius: 20px;
+    display: block;
+    height: 450px;
+    overflow: auto;
+    box-shadow: 7px 10px 34px 1px rgba(0, 0, 0,0.68), inset -1px -6px 12px 0.1px #89847e;
+  }
+h1{
+    text-align: center;
+  }
+#messages{
+   text-align: justify;
+   text-indent: 30px;
+   padding: 10px;
+   line-height: 1.8;
+   font-family: Arial, Helvetica, sans-serif;
+}
+button{
+  width: 100px;
+  height: 30px;
+  margin-top: 20px;
+  margin-left: 120px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px 1px rgba(0, 0, 0,0.68), inset -1px -6px 12px 0.1px #89847e;
+}
+button:active {
+  transform: translate(0px, 3px);
+  box-shadow: none;
+}

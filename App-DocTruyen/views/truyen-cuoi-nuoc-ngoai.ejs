@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title> Truyện cười dân gian</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="funny.css"/>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+    var socket = io("http://localhost:3000");
+    $(document).ready(function(){
+      $("#story").click(function(){
+        socket.emit("yeu_cau",{type: 'Truyện cười nước ngoài'});
+      })
+    })
+    socket.on('phan_hoi', function(data){
+        $("#messages").html(data.story);
+        $("#title").html(data.title);
+     });
+    </script>
+</head>
+<body>
+  <h1>Truyện cười nước ngoài</h1>
+  <div class ="funny">
+    <h1 id = "title">Truyện cười nước ngoài</h1>
+    <p id = "messages">
+    </p>
+</div>
+<button id = "story">New Story</button>
+</body>
+</html>

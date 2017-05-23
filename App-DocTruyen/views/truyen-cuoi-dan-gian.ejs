@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title> Truyện cười dân gian</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="funny.css"/>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script>
+    var socket = io("http://localhost:3000");
+    $(document).ready(function(){
+      $("#story").click(function(){
+        socket.emit("yeu_cau",{type: 'Truyện cười dân gian'});
+      })
+    })
+    socket.on('phan_hoi', function(data){
+        $("#messages").html(data.story);
+        $("#title").html(data.title);
+     });
+    </script>
+</head>
+<body>
+  <h1>Truyện cười dân gian</h1>
+  <div class ="funny">
+    <h1 id = "title">1 giờ của bố</h1>
+    <p id = "messages"> Bố ơi, con có thể hỏi bố một câu được không?<br />
+      – Được chứ, gì vậy? – Người cha đáp.<br />
+      – Bố, một giờ làm việc bố kiếm được bao nhiêu tiền?<br />
+      – Đó không phải là chuyện của con, tại sao con lại hỏi bố như vậy?<br />
+      – Con chỉ muốn biết một giờ bố kiếm được bao nhiêu tiền thôi mà, nói cho con nghe đi, bố – Cậu bé nài nỉ.<br />
+      – Nếu con cần phải biết thì bố nói đây, bố làm được 20 USD một giờ.<br />
+      – Vậy hả bố – Cậu bé cúi mặt đáp – ...Con có thể mượn bố 10 USD được không?<br />
+      Người cha nổi giận: “Nếu con vay tiền bố chỉ để mua đồ chơi vớ vẩn hay mấy thứ vô bổ gì đó thì hãy đi ngay về phòng, lên giường nằm và suy nghĩ xem tại sao con lại có thể ích kỷ như vậy. Bố phải làm việc vất vả suốt cả ngày rồi, bố không có thời gian cho những trò trẻ con như thế này đâu”.<br />
+      Cậu bé lặng lẽ đi về phòng, đóng cửa lại. Người đàn ông ngồi xuống và càng tức giận hơn khi nghĩ đến những điều con trai mình vừa hỏi: “Tại sao nó lại dám hỏi mình những câu hỏi như vậy chỉ để xin tiền thôi nhỉ?”.<br />
+      Khoảng một giờ sau, khi đã bình tĩnh lại, anh nghĩ có lẽ mình hơi nghiêm khắc với con. Có thể nó thật sự thiếu 10 USD để mua thứ gì đó và thực ra nó đâu có thường hay xin tiền mình. Anh tiến về phía phòng con trai và mở cửa.<br />
+      – Con đã ngủ chưa, con trai? – Anh hỏi.<br />
+      – Chưa bố ạ, con vẫn còn thức.<br />
+      – Bố nghĩ có lẽ lúc nãy bố quá nghiêm khắc với con. Hôm nay là một ngày dài và bố đã trút sự bực mình lên con. Đây, 10 USD mà con đã hỏi – Người cha nói.<br />
+      Thằng bé ngồi bật dậy, mỉm cười và reo lên: “Ôi, cảm ơn bố!”. Rồi nó luồn tay xuống dưới gối lôi ra mấy tờ giấy bạc nhàu nát. Nhìn thấy tiền của thằng bé, người đàn ông lại bắt đầu nổi giận. Thằng bé chậm rãi đếm từng tờ bạc một rồi ngước nhìn bố nó.<br />
+      – Tại sao con đã có tiền rồi mà còn xin bố nữa ? – Người cha nói trong giận dữ.<br />
+      – Bởi vì con không đủ..., nhưng bây giờ thì đủ rồi ạ… Bố ơi, bây giờ con có 20 USD, con có thể mua một giờ của bố không? Ngày mai bố hãy về nhà sớm, con xin bố, con muốn được ăn tối cùng với bố – cậu bé nói.<br />
+      Người cha như chết lặng người. Anh vòng tay ôm lấy cậu con trai bé nhỏ và cầu xin sự tha thứ.<br />
+      Đây chỉ là một lời nhắc nhở rất ngắn ngủi gửi đến cho tất cả những ai đang làm việc vất vả cho cuộc sống của mình. Chúng ta đừng để thời gian vuột mất khỏi bàn tay mà hãy dành thời gian cho những người thực sự quan trọng với chúng ta, những người gần gũi với chúng ta nhất. Hãy luôn nhớ chia sẻ giá trị một giờ của bạn cho tất cả những ai mà bạn yêu quý.<br />
+      Bởi, nếu ngày mai bạn chết đi, công ty nơi mà bạn đang làm việc sẽ dễ dàng thay thế người khác. Còn gia đình và bạn bè của chúng ta sẽ cảm thấy mất mát rất lớn trong suốt quãng đời còn lại. Hãy suy nghĩ về điều này bởi chúng ta luôn tự ép mình dành nhiều thời gian cho công việc hơn là gia đình. <br />
+      <b>Bạn thân mến, bạn nên biết và hiểu điều nào là quan trọng hơn.</b>
+    </p>
+</div>
+<button id = "story">New Story</button>
+</body>
+</html>
