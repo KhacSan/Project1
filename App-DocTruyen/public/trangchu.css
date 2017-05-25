@@ -1,9 +1,9 @@
 body{
-  background-image: url("b2.jpg");
+  background-image: url("b.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
 h2,h3{
    text-align: center;
-   color: red;
+   color: blue;
 }
